@@ -38,11 +38,10 @@ const Header = () => {
   }, [handleClickOutside, handleEscapeKey]);
 
   const navigationLinks = [
-    { id: 1, name: "Home", href: "#" },
-    { id: 2, name: "About", href: "#" },
-    { id: 3, name: "Services", href: "#" },
- 
-    { id: 5, name: "Contact", href: "#" },
+    { id: 1, name: "Home", href: "/" },
+    { id: 2, name: "About", href: "/about" },
+    { id: 3, name: "Services", href: "/services" },
+    { id: 4, name: "Contact", href: "/contact" },
   ];
 
   return (
