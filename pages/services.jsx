@@ -1,9 +1,9 @@
 // pages/services.js
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import pageStyles from "../styles/Services.module.css"; 
-import ServiceRow from "../component/ServicesRow.jsx"; // match your actual folder name!
-
+import styles from "@/styles/Services.module.css";
+import ServiceRow from "@/Component/ServicesRow.jsx";
+import Header from "@/Component/Header.jsx";
 export default function Services() {
   const [servicesData, setServicesData] = useState(null);
   const API_URL = "http://localhost:5000/api";
@@ -33,6 +33,7 @@ export default function Services() {
 
   return (
     <div>
+         <Header />
       {/* Top hero image */}
       <Image
         src={
@@ -43,22 +44,22 @@ export default function Services() {
         alt="Services Hero"
         width={100}
         height={100}
-        className={pageStyles.heroImage}
+        className={styles.heroImage}
         unoptimized
       />
 
-      <div className={pageStyles.servicesContainer}>
+      <div className={styles.servicesContainer}>
         {/* Hero Section: large text paragraph */}
-        <section className={pageStyles.hero}>
-          <p className={pageStyles.heroText}>
+        <section className={styles.hero}>
+          <p className={styles.heroText}>
             {description || "Signature Cocktails, Dance-Floor Surprises..."}
           </p>
         </section>
 
         {/* Services Snippet: heading + mapped rows */}
-        <div className={pageStyles.servicesSnippet}>
-          <p className={pageStyles.servicesHeading}>
-            {heroTitle || "Our Services"}
+        <div className={styles.servicesSnippet}>
+          <p className={styles.servicesHeading}>
+            Our Services
           </p>
 
           {servicesList.length > 0 ? (
