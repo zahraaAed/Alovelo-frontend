@@ -2,6 +2,8 @@
 import React from "react";
 import styles from "../styles/Contact.module.css";
 import Header from "@/Component/Header.jsx";
+import Footer from "@/Component/Footer.jsx";
+
 export default function Contact() {
   return (
     <>
@@ -55,6 +57,7 @@ export default function Contact() {
         </button>
       </form>
     </div>
+      <Footer/>
     </>
   );
 }

@@ -4,6 +4,7 @@ import styles from "@/styles/Home.module.css";
 import Image from "next/image";
 import Header from "@/Component/Header.jsx";
 import Link from "next/link";
+import Footer from "@/Component/Footer.jsx";
 
 export default function Home() {
   const [homeData, setHomeData] = useState(null);
@@ -70,7 +71,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      
+      <Footer/>
     </div>
   );
 }

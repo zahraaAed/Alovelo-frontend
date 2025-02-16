@@ -70,7 +70,11 @@
     color: #ddd;
     text-align: center;
   }
-  
+  .footerColumn a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Set text color to black */
+    font-weight: bold;
+  }
   /* Responsive Adjustments */
   @media (max-width: 768px) {
     .footerTop {

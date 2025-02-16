@@ -3,6 +3,7 @@ import Image from "next/image";
 import Head from "next/head";
 import styles from "@/styles/About.module.css";
 import Header from "@/Component/Header.jsx";
+import Footer from "@/Component/Footer.jsx";
 
 console.log("Styles Object:", styles);
 console.log("Image Component:", Image);
@@ -139,9 +140,7 @@ export default function About() {
       </section>
 
       {/* Footer */}
-      <footer className={styles.footer}>
-        <p>&copy; 2024 Alovelo. All Rights Reserved.</p>
-      </footer>
+    <Footer/>
     </>
   );
 }

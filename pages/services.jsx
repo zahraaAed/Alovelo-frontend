@@ -4,6 +4,8 @@ import Image from "next/image";
 import styles from "@/styles/Services.module.css";
 import ServiceRow from "@/Component/ServicesRow.jsx";
 import Header from "@/Component/Header.jsx";
+import Footer from "@/Component/Footer.jsx";
+
 export default function Services() {
   const [servicesData, setServicesData] = useState(null);
   const API_URL = "http://localhost:5000/api";
@@ -72,6 +74,7 @@ export default function Services() {
           {/* Removed the extra <ServiceRow /> so we only render from the map */}
         </div>
       </div>
+        <Footer/>
     </div>
   );
 }
