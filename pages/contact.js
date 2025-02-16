@@ -1,9 +1,11 @@
 // pages/contact.js
 import React from "react";
 import styles from "../styles/Contact.module.css";
-
+import Header from "@/Component/Header.jsx";
 export default function Contact() {
   return (
+    <>
+       <Header />
     <div className={styles.contactSection}>
       <h1 className={styles.heading}>HAVE AN EVENT COMING UP?</h1>
       <p className={styles.subtitle}>
@@ -53,5 +55,6 @@ export default function Contact() {
         </button>
       </form>
     </div>
+    </>
   );
 }

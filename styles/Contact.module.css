@@ -1,22 +1,23 @@
 /* Container for the whole form section */
 .contactSection {
-  max-width: 800px;
+width: 80%;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 100px 90px;
 }
 
 /* Main heading */
 .heading {
-  font-size: 36px;
+  font-size: 110px;
   color: #6B353D;
-  margin-bottom: 10px;
+  padding-top: 50px;
+  width: 60%;
 }
 
 /* Subtitle under the heading */
 .subtitle {
-  font-size: 16px;
+  font-size: 48px;
   color: #000;
-  margin-bottom: 30px;
+  margin-top: -50px;
 }
 
 /* The form itself */
@@ -24,6 +25,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding-top: 30px;
 }
 
 /* Two-column fields for name + email */
@@ -40,23 +42,24 @@
 /* Full-width subject field (optional) */
 .formGroupMessage {
   width: 800px;
+  margin-top: 30px;
 }
 
 /* Subject input uses black bottom border specifically */
 .subjectInput {
   border: none;
   border-bottom: 1px solid #000;
-  font-size: 14px;
+  font-size: 24px;
   padding: 5px 0;
   outline: none;
-  width: 53vw;
+  width:66vw;
 }
 
 /* Generic input styling for name/email */
 .input {
   border: none;
   border-bottom: 1px solid #000;
-  font-size: 14px;
+  font-size: 24px;
   padding: 5px 0;
   outline: none;
   width: 25vw; /* side-by-side smaller fields */
@@ -66,12 +69,12 @@
 .textarea {
   border: none;
   border-bottom: 1px solid #000;
-  font-size: 14px;
+  font-size: 24px;
   padding: 5px 0;
   outline: none;
   resize: none; /* disable manual resizing */
-  height: 100px;
-  width: 53vw; /* match subject width if desired */
+  height: 150px;
+  width: 66vw; /* match subject width if desired */
 }
 
 /* Highlight on focus */
@@ -92,13 +95,13 @@
 /* Send button */
 .submitBtn {
   align-self: flex-start;
-  background-color: #ddd;
-  border: none;
-  padding: 10px 20px;
-  font-size: 14px;
-  color: #333;
+  background-color: #D9D9D9;
+  font-weight: 600;
+  padding: 10px 60px;
+  font-size: 16px;
+  color: #6B353D;
+  border:  1px solid #6B353D;
   cursor: pointer;
-  border-radius: 4px;
   transition: background-color 0.2s ease;
 }
 .submitBtn:hover {
@@ -109,9 +112,11 @@
 @media (max-width: 600px) {
   .heading {
     font-size: 28px;
+    width: 100%;
   }
   .subtitle {
     font-size: 14px;
+  margin-top: 0;
   }
   .formRow {
     flex-direction: column;
@@ -120,10 +125,20 @@
     width: 100%;
   }
   .subjectInput,
-  .textarea {
-    width: 100%;
+  .textarea ,
+  .input{
+    width: 80%;
+    font-size: 14px;
   }
-  .input {
-    width: 100%;
-  }
+.contactSection{
+  padding: 60px 0;
+
+}
+.divider{
+  margin: 0;
+}
+.submitBtn {
+
+  padding: 10px 30px;
+}
 }
