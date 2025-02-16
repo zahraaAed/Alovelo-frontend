@@ -3,19 +3,16 @@
 /* Global Container: remove any horizontal overflow */
 
 
-/* Top-level image container */
-.topImageContainer {
-  width: 100%;
-  height: 150vh; /* match your design */
-  overflow: hidden;
-  position: relative;
-}
+
 
 .heroImage {
-  width: 100%;
-  height: 150vh;
-  object-fit: cover; /* ensure it covers container */
+  width: 100vw;
+  height: 150vh; /* Adjusted to fit screen */
+  max-height: 150vh; /* Prevents excessive height */
+  object-fit: cover;
+  overflow-x: hidden;
 }
+
 
 /* HERO SECTION */
 .hero {
@@ -24,130 +21,140 @@
   align-items: center;
   margin-top: -6vh;
   overflow-x: hidden;
+  justify-content: center
+
 }
 
-.textBlock {
-  text-align: left;
+.heroContent{
   width: 80%;
-  height: 50vh;
-}
+margin-top: 20px;
 
-.textBlock h1 {
+}
+.heroContent h1{
+  font-size: 90px;
+  text-align: left;
+
+}
+.heroContent p{
   font-size: 60px;
-  font-weight: bold;
-  color: #000;
-  margin-bottom: 10px;
+  text-align: left;
+  padding: 0;
+  margin-top: -60px;
+
 }
 
-.textBlock p {
-  font-size: 36px;
-  line-height: 1;
-  color: #000;
-}
-
-/* INTRO TEXT SECTION */
-.introSection {
-  margin: 0 auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.introSection h2 {
-  font-size: 70px;
-  color: #4A3B46;
-  margin-bottom: 20px;
-  width: 80vw;
-  margin: 0 auto;
-  font-family: 'BOLDE', sans-serif;
-}
 
 /* VISION & MISSION SECTION */
 .visionMission {
   display: flex;
-  justify-content: space-between; /* text on far left, image on far right */
-  align-items: flex-start;
+  justify-content: center; /* text on far left, image on far right */
+  align-items: center;
   width: 100%;
-  margin: 50px auto;
+  
   gap: 40px;
   text-align: start;
+  flex-direction: column;
+;
 }
-
-.textSection {
-  flex: 0 0 50%;
+.textContainer{
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+padding-left: 250px;
+}
+.missionVissionContainer{
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  padding-left: 10vw; /* left padding for text if desired */
 }
+.vision, .mission {
+  flex: 1; /* Ensures text takes equal space */
 
-.visionBlock,
-.missionBlock {
-  color: #3d3d3d;
 }
+.visionMission h1{
+text-align: center;
+  font-size: 90px;
+  color: #4A3B46;
+}
+.vision h2{
+  text-align: left;
+  color: #4A3B46;
+    font-size: 60px;
+  }
+  .vision h3{
+    text-align: left;
+      font-size: 48px;
+      color: #4A3B46;
+      font-weight: 600;
+    }
+  .vision p{
+    text-align: left;
+      font-size: 55px;
+      color: #4A3B46;
+    }
 
-/* Vision/Mission headings */
-.visionBlock h2,
-.missionBlock h2 {
-  font-size: 42px;
-  color: #6B353D;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  font-weight: bold;
-}
+    .mission h2{
+      text-align: left;
+        font-size: 60px;
+        color: #4A3B46;
+      }
+      .mission h3{
+        text-align: left;
+          font-size: 48px;
+          font-weight: 600;
+          color: #4A3B46;
+        }
+      .mission p{
+        text-align: left;
+          font-size: 55px;
+          color: #4A3B46;
+        }
 
-/* Additional sub-headings for Vision & Mission */
-.visionBlock h3,
-.missionBlock h3 {
-  font-size:36px;
-  margin-bottom: 5px;
-  font-weight: 600;
-}
-
-/* Paragraph text */
-.visionBlock p,
-.missionBlock p {
-  font-size: 24px;
-  line-height: 1.6;
-}
-
-.imageSection {
-  flex: 0 0 auto;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-}
+  .missionVissionContainer{
+width: 50%;
+  }
 
 .missionImage {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
+
   align-self: flex-end;
+
+    position: relative;
+    top: -400px; /* Move the image 30px up (adjust as needed) */
+  
+  
 }
 
 /* FEATURES SECTION */
-.featuresSection {
-  background-color: #F6F7F4;
-  text-align: center;
-  padding: 50px 20px;
-}
 
-.featuresSection h2 {
-  font-size: 70px;
-  color: #6B353D;
+.features{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.features h2 {
+  font-size: 90px;
+
   margin-bottom: 60px;
   text-transform: uppercase;
   font-family: 'BOLDE', sans-serif;
+  letter-spacing: 9px;
+  color: #4A3B46;
+  text-align: center;
 }
 
 /* Container for the 3 icons */
-.featuresList {
+.featureContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  gap: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
+  justify-content: space-around;
+
+margin-top: 20px;
+
+
 }
 
 /* Individual feature cards */
@@ -155,60 +162,82 @@
   display: flex;
   flex-direction: column;
   flex: 1 1 0;
-  align-items: center;
-  justify-content: center;
-  min-width: 200px;
+  align-items: flex-start;
+  justify-content: flex-start;
+width: 100%;
   border: 1px solid transparent;
+  margin-left: 150px;
 }
 
 .featureItem img {
-  width: 10vw;
+  width: auto;
   height: 15vh;
-  margin-bottom: 10px;
+  align-items: flex-start;
+ 
+  
 }
 
 .featureItem p {
-  font-size: 24px;
+  font-size: 60px;
   font-weight: bold;
   color: #3D3D3D;
+  width: 60%;
+  color: #4A3B46;
+  text-align: left;
 }
 
 /* ----- MEDIA QUERIES ----- */
 @media (max-width: 992px) {
   .heroImage {
     height: 100vh;
+    width: auto;
   }
 }
 
 @media (max-width: 768px) {
-  .textBlock h1 {
+
+  .heroContent{
+    width: 100%;
+  }
+  .heroContent h1{
     font-size: 28px;
   }
-  .textBlock p {
+  .heroContent p {
     font-size: 14px;
   }
   .visionMission img {
     max-width: 90%;
   }
   .introSection h2 {
-    font-size: 36px;
+    font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  .textBlock h1 {
-    font-size: 24px;
-  }
-  .textBlock p {
-    font-size: 12px;
-  }
-  .visionBlock,
-  .missionBlock {
-    max-width: 100%;
-  }
-}
 
-@media (max-width: 768px) {
+}
+@media (max-width: 1248px) {
+  .features{
+width: 90%;
+margin: 0 auto;
+  }
+  .heroContent{
+    width: 90%;
+  }
+
+  .heroContent h1, .features h2{
+    font-size: 28px;
+    letter-spacing: 0;
+  }
+.heroContent p {
+  font-size: 14px;
+}
+.visionMission img {
+  max-width: 90%;
+}
+.introSection h2 {
+  font-size: 20px;
+}
   .featureItem {
     max-width: 100%;
   }
@@ -216,11 +245,108 @@
     width: 150px;
     height: 150px;
   }
+  .heroContent p{
+   
+    margin-top: 0;
+  
+  }
+  .visionMission h1{
+  
+      font-size: 36px;
+    
+    }
+    .vision h2{
+      text-align: left;
+      
+        font-size: 20px;
+      }
+      .vision h3{
+        text-align: left;
+          font-size: 20px;
+     
+        }
+      .vision p{
+     
+          font-size: 16px;
+       
+        }
+    
+        .mission h2{
+        
+            font-size: 20px;
+          
+          }
+          .mission h3{
+          
+              font-size: 20px;
+            
+            }
+          .mission p{
+        
+              font-size: 16px;
+              
+            }
+            .textContainer{
+          width: 100%;
+              display: flex;
+              flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            
+        
+            }
+            .missionImage {
+              max-width: 100%;
+              height: auto;
+              border-radius: 8px;
+          
+              align-self:flex-start ;
+          
+                position: relative;
+                top: 0px; /* Move the image 30px up (adjust as needed) */
+              
+}
+.missionVissionContainer{
+  width: 90%;
+    }
+    .featureItem p {
+      font-size: 20px;
+     
+      width: 90%;
+  
+     
+    }
+    
+}
+@media (max-width: 768px) {
+  .featureContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  
+  margin-top: 20px;
+  flex-direction: column;
+  
+  }  
+  .featureItem {
+
+    margin-left: 0;
+}
+.heroImage {
+  height: 80vh; /* Reduce height on smaller screens */
+}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .featureItem img {
     width: 120px;
     height: 120px;
   }
+  .heroImage {
+    height: 55vh; /* Further reduce for very small screens */
+    object-fit: contain;
+    width: 100vw;
+  }
 }
+

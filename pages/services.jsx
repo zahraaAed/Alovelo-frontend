@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import pageStyles from "../styles/Services.module.css"; 
-import ServiceRow from "../component/ServicesRow"; // match your actual folder name!
+import ServiceRow from "../component/ServicesRow.jsx"; // match your actual folder name!
 
 export default function Services() {
   const [servicesData, setServicesData] = useState(null);

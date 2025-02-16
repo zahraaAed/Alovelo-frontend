@@ -1,9 +1,15 @@
 
-body {
+body.parent-container {
   background-color: #f8f8f8;
   text-align: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
 .hero-section {
   position: relative;
   text-align: center;
