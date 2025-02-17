@@ -8,7 +8,7 @@ import Footer from "@/Component/Footer.jsx";
 
 export default function Services() {
   const [servicesData, setServicesData] = useState(null);
-  const API_URL = "http://localhost:5000/api";
+  const API_URL = "https://alovelo-backend.onrender.com/api";
 
   useEffect(() => {
     fetch(`${API_URL}/services/get`)
@@ -40,7 +40,7 @@ export default function Services() {
       <Image
         src={
           heroImage
-            ? `http://localhost:5000${heroImage}`
+            ? `https://alovelo-backend.onrender.com${heroImage}`
             : "/assets/services-image.png"
         }
         alt="Services Hero"

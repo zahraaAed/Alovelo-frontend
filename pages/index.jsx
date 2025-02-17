@@ -10,7 +10,7 @@ export default function Home() {
   const [homeData, setHomeData] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/home/homecontent")
+    fetch("https://alovelo-backend.onrender.com/api/home/homecontent")
       .then((res) => res.json())
       .then((data) => {
         setHomeData(data[0]); // Assuming only one document exists
@@ -29,7 +29,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className={styles.heroSection}>
       <Image 
-  src={`http://localhost:5000${homeData.imageHome}`} 
+  src={`https://alovelo-backend.onrender.com${homeData.imageHome}`} 
   alt="Hero Image" 
   width={1000}
   height={300} 
@@ -50,7 +50,7 @@ export default function Home() {
 
       {/* Events Section */}
       <section class={styles.eventSection} >
-        <img src={`http://localhost:5000${homeData.imageSection}`} alt="Event" className={styles.eventImage}  />
+        <img src={`https://alovelo-backend.onrender.com${homeData.imageSection}`} alt="Event" className={styles.eventImage}  />
         {/*<h2>{homeData.titleSection}</h2>*/}
         <p className={styles.eventstext} >{homeData.contentSection}</p>
       </section>
@@ -65,7 +65,7 @@ export default function Home() {
       <section className={styles.gallery}>
         <div className={styles.galleryContainer}>
           {homeData.galleryImages.map((img, index) => (
-            <img key={index} src={`http://localhost:5000${img}`} alt={`Gallery ${index}`} width="300px" />
+            <img key={index} src={`https://alovelo-backend.onrender.com${img}`} alt={`Gallery ${index}`} width="300px" />
           ))}
         </div>
       </section>

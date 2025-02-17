@@ -9,8 +9,14 @@ const nextConfig = {
         port: "5000",
         pathname: "/images/**",
       },
+      {
+        protocol: "https",
+        hostname: "alovelo-backend.onrender.com",
+        pathname: "/images/**",
+      },
     ],
   },
 };
 
-export default nextConfig; // ✅ Use ESM format
+export default nextConfig;
+

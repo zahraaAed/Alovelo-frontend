@@ -17,7 +17,7 @@ export default function About() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/about/get");
+        const response = await fetch("https://alovelo-backend.onrender.com/api/about/get");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -61,7 +61,7 @@ export default function About() {
       <Header />
       {/* Hero Section */}
       <Image
-        src={`http://localhost:5000/images/${aboutData.hero_image
+        src={`https://alovelo-backend.onrender.com/images/${aboutData.hero_image
           .split("/")
           .pop()}`}
         alt="About Hero"
@@ -100,7 +100,7 @@ export default function About() {
             </div>
           </div>
           <Image
-            src={`http://localhost:5000${
+            src={`https://alovelo-backend.onrender.com${
               aboutData?.main_image?.startsWith("/")
                 ? aboutData.main_image
                 : "/" + aboutData.main_image
@@ -121,7 +121,7 @@ export default function About() {
             aboutData.features.map((feature, index) => (
               <div key={index} className={styles.featureItem}>
                 <Image
-                  src={`http://localhost:5000${
+                  src={`https://alovelo-backend.onrender.com${
                     feature.icon?.startsWith("/")
                       ? feature.icon
                       : "/" + feature.icon
