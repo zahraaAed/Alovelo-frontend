@@ -16,7 +16,7 @@ export default function About (){
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/about/get");
+        const response = await fetch("https://alovelo-backend.onrender.com/api/about/get");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
