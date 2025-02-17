@@ -1,7 +1,6 @@
 // components/Footer.js
 import Image from "next/image";
-import styles from "@/styles/Footer.module.css";
-import Link from "next/link";
+import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
@@ -14,7 +13,7 @@ export default function Footer() {
             <Image
               src="/assets/white-logo-edit.png"
               alt="Alovelo Logo"
-              width={100}
+              width={250}
               height={100}
               className={styles.logoImage}
               unoptimized
@@ -26,11 +25,11 @@ export default function Footer() {
         <div className={styles.footerColumn}>
           <h4>NAVIGATION</h4>
           <ul>
-  <li><Link href="/">Home</Link></li>
-  <li><Link href="/about">About Us</Link></li>
-  <li><Link href="/services">Services</Link></li>
-  <li><Link href="/contact">Contact Us</Link></li>
-</ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Services</li>
+            <li>Contact Us</li>
+          </ul>
         </div>
 
         {/* Column 3: Quick Action */}
@@ -46,17 +45,15 @@ export default function Footer() {
         <div className={styles.footerColumn}>
           <h4>Platform</h4>
           <ul>
-          <li>
-  <a href="https://www.instagram.com/alovelo.lb?igsh=d3hpMWV0bmZ3NjUy" target="_blank" rel="noopener noreferrer">
-    <Image
-      src="/assets/🦆 icon _Instagram_.png"
-      alt="Instagram"
-      width={25}
-      height={25}
-      unoptimized
-    />
-  </a>
-  </li>
+            <li>
+              <Image
+                src="/assets/🦆 icon _Instagram_.png"
+                alt="Instagram"
+                width={25}
+                height={25}
+                unoptimized
+              />
+            </li>
             <li>
               <Image
                 src="/assets/🦆 icon _Facebook Square_.png"

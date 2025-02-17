@@ -1,105 +1,114 @@
-/* General Page Styling */
-.servicesContainer {
-    font-family: Arial, sans-serif;
-    background: #F6F7F4;
-    color: #3D3D3D;
-    text-align: center;
-    padding: 20px;
-}
 
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-}
+/* styles/Services.module.css */
 
-.hero img {
+.heroImage {
     width: 100%;
-    max-height: 500px;
+    height: 120vh;
+    
+  
     object-fit: cover;
-    border-radius: 10px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    color: #6B353D;
-    margin-top: 20px;
-}
-
-.hero p {
-    font-size: 20px;
-    margin-top: 10px;
-}
-
-/* Services List */
-.serviceList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 50px 20px;
-}
-
-.serviceCard {
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 300px;
+  }
+  
+  /* Container for everything except top hero image */
+  .servicesContainer {
+    margin: 0 auto;
+    padding: 5px;
+ 
+   margin: 0 auto;
+   
+  }
+  
+  /* Hero Section (the big text paragraph under hero) */
+  .hero {
     text-align: center;
-}
+    margin-bottom: 50px;
+    width: 80%;
+    margin: 0 auto;
+    padding-left: 80px;
+   
+  }
+  .heroText {
+    font-size: 80px;
+  
+    color: #000;
+    font-weight: 600;
+    
+    
+    text-align: left; 
+    
+  }
+  
 
-.serviceCard img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
-}
+  .servicesSnippet {
+    
+    margin: 0 auto;
+    padding: 5px;
+  }
+  
 
-.serviceCard h3 {
-    font-size: 22px;
-    color: #6B353D;
-}
-
-.serviceCard p {
-    font-size: 16px;
-    margin-top: 10px;
-}
-
-/* Footer Section */
-.footer {
-    background-color: #6B353D;
-    color: white;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .hero h1 {
-        font-size: 40px;
+  .servicesHeading {
+    font-size: 90px;
+    text-transform: uppercase;
+    color: #4A3B46;
+    text-align: center;
+    font-family: "BOLDE", sans-serif;
+    font-weight: bolder;
+    
+  }
+  
+ 
+  
+  /* ----- Responsive Breakpoints ----- */
+  @media (max-width: 1130px) and (min-width:500px) {
+    .heroImage {
+      height: 80vh;
+      width: auto;
+      object-fit: contain;
     }
-    .hero p {
-        font-size: 18px;
+    .heroText{
+      font-size: 28px;
+      
     }
-}
+    .servicesHeading{
+      font-size: 28px;
 
-@media (max-width: 768px) {
-    .hero h1 {
-        font-size: 32px;
     }
-    .hero p {
-        font-size: 16px;
-    }
-    .serviceList {
-        flex-direction: column;
-        align-items: center;
-    }
-    .serviceCard {
-        width: 90%;
-    }
-}
 
-@media (max-width: 480px) {
+  }
+  @media (max-width: 768px) {
+    .hero{
+      width: 100%;
+      padding-left: 20px;
+    
+    }
+    .heroText {
+      font-size: 28px;
+    }
+    .serviceIcon {
+      width: 80px;
+    }
+    .serviceText p {
+      font-size: 16px;
+    }
+    .heroImage {
+      width: 100vw;
+      object-fit: contain;
+      height: 70vh; /* Reduce height on smaller screens */
+    }
+   
+  }
+  @media (max-width: 480px) {
+
+    .heroText {
+      font-size: 28px;
+    }
+    .serviceText h3 {
+      font-size: 18px;
+    }
+    .serviceText p {
+      font-size: 14px;
+    }
+ 
     .hero h1 {
         font-size: 28px;
     }
@@ -111,5 +120,13 @@
     }
     .serviceCard p {
         font-size: 14px;
+    }
+    .heroImage {
+      height: 50vh; /* Further reduce for very small screens */
+      object-fit: contain;
+      width: 100vw;
+    }
+    .servicesHeading{
+font-size: 36px;
     }
 }

@@ -1,0 +1,106 @@
+/* Footer.module.css */
+
+/* Basic container styling */
+.footer {
+  background-color: #6B353D; /* Maroon background */
+  color: #fff;
+  padding: 40px 20px;
+  margin: 0; /* remove default margin if any */
+}
+
+/* Top row with 4 columns */
+.footerTop {
+  display: flex;
+  flex-wrap: wrap; /* allow wrapping on smaller screens */
+ width: 90%;
+  align-items: flex-start;
+
+  margin: 0 auto; /* center container */
+  gap: 250px; /* spacing between columns */
+}
+
+/* Each column: left-aligned content */
+.footerColumn {
+  flex: 1 1 200px;
+  min-width: 160px;
+  text-align: left;
+}
+
+/* Column headings */
+.footerColumn h4 {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Ensures list items align to the left */
+}
+
+.footerColumn li {
+  font-size: 14px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%; 
+  margin-top: 10px;
+}
+
+.footerColumn li a {
+color: white;
+font-weight: 200;
+
+}
+
+
+/* Logo Column */
+.footerLogo {
+  margin-bottom: 10px;
+}
+.logoImage {
+  width: 200px; /* rely on numeric props from next/image */
+  height: auto !important;
+  display: block; /* ensures it doesn't get centered by text-align */
+}
+
+/* Middle row with icons (Location, Phone, Email) */
+.footerIcons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10vh;
+  gap: 30vw; /* space between icons */
+  margin: 5vh 0; /* spacing above/below icons row */
+}
+
+/* Bottom row text */
+.footerBottom {
+  font-size: 14px;
+  color: #ddd;
+  text-align: center;
+}
+.footerColumn a {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Set text color to black */
+  font-weight: bold;
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footerTop {
+    flex-direction: column;
+    align-items: flex-start;
+    gap:30px;
+  }
+  .footerLogo img {
+    width: 100px;
+    max-width: 250px;
+  }
+  .footerIcons {
+    gap: 30px;
+    margin: 20px 0;
+  }
+}

@@ -1,109 +1,144 @@
-/* General Container */
-.container {
-    font-family: Arial, sans-serif;
-    background: #F6F7F4;
-    color: #3D3D3D;
-    text-align: center;
-    padding: 40px;
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  /* Title */
-  .h2 {
+/* Container for the whole form section */
+.contactSection {
+width: 80%;
+  margin: 0 auto;
+  padding: 100px 90px;
+}
+
+/* Main heading */
+.heading {
+  font-size: 110px;
+  color: #6B353D;
+  padding-top: 50px;
+  width: 60%;
+}
+
+/* Subtitle under the heading */
+.subtitle {
+  font-size: 48px;
+  color: #000;
+  margin-top: -50px;
+}
+
+/* The form itself */
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+/* Two-column fields for name + email */
+.formRow {
+  display: flex;
+  gap: 3vw;
+}
+.formGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Full-width subject field (optional) */
+.formGroupMessage {
+  width: 800px;
+  margin-top: 30px;
+}
+
+/* Subject input uses black bottom border specifically */
+.subjectInput {
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 24px;
+  padding: 5px 0;
+  outline: none;
+  width:66vw;
+}
+
+/* Generic input styling for name/email */
+.input {
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 24px;
+  padding: 5px 0;
+  outline: none;
+  width: 25vw; /* side-by-side smaller fields */
+}
+
+/* Textarea for message */
+.textarea {
+  border: none;
+  border-bottom: 1px solid #000;
+  font-size: 24px;
+  padding: 5px 0;
+  outline: none;
+  resize: none; /* disable manual resizing */
+  height: 150px;
+  width: 66vw; /* match subject width if desired */
+}
+
+/* Highlight on focus */
+.input:focus,
+.subjectInput:focus,
+.textarea:focus {
+  border-bottom-color: #6B353D; /* highlight color */
+}
+
+/* Optional horizontal divider */
+.divider {
+  margin: 20px 0;
+  height: 1px;
+  background-color: #eee;
+  border: none;
+}
+
+/* Send button */
+.submitBtn {
+  align-self: flex-start;
+  background-color: #D9D9D9;
+  font-weight: 600;
+  padding: 10px 60px;
+  font-size: 16px;
+  color: #6B353D;
+  border:  1px solid #6B353D;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.submitBtn:hover {
+  background-color: #ccc;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+  .heading {
     font-size: 28px;
-    color: #6B353D;
-    font-weight: bold;
+    width: 100%;
   }
-  
-  .p {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  /* Form Styling */
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .formGroup {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  
-  .input {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .textarea {
-    padding: 10px;
-    height: 100px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  /* Button */
-  .button {
-    padding: 10px;
-    background-color: #6B353D;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #944A5A;
-  }
-  
-  /* Footer */
-  .footer {
-    margin-top: 40px;
-    background: #6B353D;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .footerContent {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .footer h3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  .copyright {
-    margin-top: 10px;
+  .subtitle {
     font-size: 14px;
-    color: #ddd;
+  margin-top: 0;
   }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .formGroup {
-      flex-direction: column;
-    }
-  
-    .input, .textarea {
-      width: 100%;
-    }
-  
-    .footerContent {
-      flex-direction: column;
-      text-align: center;
-    }
+  .formRow {
+    flex-direction: column;
   }
-  
+  .formGroupMessage {
+    width: 100%;
+  }
+  .subjectInput,
+  .textarea ,
+  .input{
+    width: 80%;
+    font-size: 14px;
+  }
+.contactSection{
+  padding: 60px 0;
+
+}
+.divider{
+  margin: 0;
+}
+.submitBtn {
+
+  padding: 10px 30px;
+}
+}
